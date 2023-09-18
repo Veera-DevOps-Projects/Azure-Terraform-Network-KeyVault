@@ -71,5 +71,5 @@ We will use terraform to configure the whole deployment.
 
 ![codebase](images/code-base.png)
 
-Code is segregated into two modules and the main section. Module virtual networks and subnets implement the actual VNet and it's components. main.tf code contains resource group implementation and calls both modules to implement the entire network. modules\keyvault contains the Azure Key Vault module and outside of the modules folder contains the root module code.
+Code is segregated into three modules and the main section. Module virtual networks (**modules/virtual-network**) and subnets (**modules/subnets**) implement the actual VNet and it's components, and **modules\keyvault** contains the Azure Key Vault module. main.tf code contains resource group implementation and calls three modules to implement the entire network and key vault service. 
 
